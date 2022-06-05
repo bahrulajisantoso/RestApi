@@ -11,13 +11,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tglTiket = $_POST['tgl_tiket'];
     $jumlahTiket = $_POST['jumlah_tiket'];
     $totalHarga = $_POST['total_harga'];
+    $createdAt = $_POST['created_at'];
 
 
     $response = array();
 
 
     $query_tambah_transaksi = "INSERT INTO transaksis VALUES
-        ('', '$idUser', '$idWisata', '$tglTiket', '$jumlahTiket', '$totalHarga','','')";
+        ('', '$idUser', '$idWisata', '$tglTiket', '$jumlahTiket', '$totalHarga','$createdAt','')";
 
     $result = mysqli_query($koneksi, $query_tambah_transaksi);
     $cek = mysqli_affected_rows($koneksi);
