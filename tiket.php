@@ -1,17 +1,19 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require_once "koneksi.php";
 
-    $query_tampil = "SELECT * FROM tikets";
-    $result_wisata = mysqli_query($koneksi, $query_tampil);
+    $idUSer = $_POST["user_mobile_id"];
+
+    $query_tampil = "SELECT * FROM tikets WHERE user_mobile_id = '$idUSer'";
+    $result_tiket = mysqli_query($koneksi, $query_tampil);
     $cek = mysqli_affected_rows($koneksi);
 
     $ambil = array();
 
     if ($cek > 0) {
-        while ($baris = mysqli_fetch_assoc($result_wisata)) {
+        while ($baris = mysqli_fetch_assoc($result_tiket)) {
             $ambil[] = $baris;
         }
         $response["kode"]   = 1;
