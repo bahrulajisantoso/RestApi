@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $nama_user = $_POST["nama"];
     // $username = $_POST["username"];
-    $jenis_kelamin = $_POST["jenis_kelamin"];
+    // $jenis_kelamin = $_POST["jenis_kelamin"];
     $tgl_lahir = $_POST["tgl_lahir"];
     $no_hp = $_POST["no_hp"];
     $email = $_POST["email"];
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $password = password_hash($password, PASSWORD_DEFAULT);
 
         $query_tambah_user = "INSERT INTO user_mobiles VALUES
-        ('', '$nama_user', '$jenis_kelamin', '$tgl_lahir', '$no_hp', '$email', '$password','','')";
+        ('', '$nama_user', '$tgl_lahir', '$no_hp', '$email', '$password','','')";
 
         $result = mysqli_query($koneksi, $query_tambah_user);
         $cek = mysqli_affected_rows($koneksi);

@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $id_user = $_POST["id"];
     $nama_user = $_POST["nama"];
-    $jenis_kelamin = $_POST["jenis_kelamin"];
+    // $jenis_kelamin = $_POST["jenis_kelamin"];
     $tgl_lahir = $_POST["tgl_lahir"];
     $no_hp = $_POST["no_hp"];
     $email = $_POST["email"];
@@ -16,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $query = "UPDATE user_mobiles SET 
         nama = '$nama_user',
-        jenis_kelamin = '$jenis_kelamin',
         tgl_lahir = '$tgl_lahir',
         no_hp = '$no_hp',
         email = '$email'

@@ -11,7 +11,7 @@ $response = [];
 if (mysqli_num_rows($result) > 0) {
    $response['nama'] = $data['nama'];
    // $response['username'] = $data['username'];
-   $response['jenis_kelamin'] = $data['jenis_kelamin'];
+   // $response['jenis_kelamin'] = $data['jenis_kelamin'];
    $response['tgl_lahir'] = $data['tgl_lahir'];
    $response['no_hp'] = $data['no_hp'];
    $response['email'] = $data['email'];
