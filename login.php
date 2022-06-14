@@ -21,16 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $response["kode"] = 200;
             $response["pesan"] = "Login berhasil";
             $response["id"] = $baris["id"];
-            // $response["data"] = array(
-            //     "id" => $baris["id"],
-            // "nama" => $baris["nama"],
-            // "username" => $baris["username"],
-            // "jenis_kelamin" => $baris["jenis_kelamin"],
-            // "email" => $baris["email"],
-            // "no_hp" => $baris["no_hp"],
-            // "tgl_lahir" => $baris["tgl_lahir"],
-            // "gambar" => $baris["gambar"]
-            // );
         } else {
 
             $response["kode"] = 403;

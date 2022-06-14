@@ -5,13 +5,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require_once "koneksi.php";
 
     $nama_user = $_POST["nama"];
-    // $username = $_POST["username"];
-    // $jenis_kelamin = $_POST["jenis_kelamin"];
     $tgl_lahir = $_POST["tgl_lahir"];
     $no_hp = $_POST["no_hp"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    // $konfirm_password = $_POST["konfirm_password"];
 
     $response = array();
 
